@@ -1,0 +1,13 @@
+<article class="portfolio-item portfolio-item--large" data-id="<%= item.id %>">
+  <div class="portfolio-item__inner">
+    <div class="portfolio-item__image-wrapper">
+      <img class="portfolio-item__image" src="<%= item.screenshot %>" alt="<%= item.title %> screenshot">
+    </div>
+    <div class="portfolio-item__copy">
+      <h3 class="kicker"><span><%= item.role %></span><span><%= item.date %></span></h3>
+      <h2 class="portfolio-item__title"><%= item.title %></h2>
+      <p><%- item.description %></p>
+      <%- item.link %>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,131 @@
+@media print {
+	* {
+		background: none !important;
+		color: black !important;
+	}
+	.main-nav__container {
+		display: none !important;
+	}
+	body {
+		font-size: 89%;
+	}
+	p, li {
+		font-size: 0.825em;
+	}
+	h2 {
+		// margin-top: 0.25em;
+		line-height: 1.2;
+	}
+	// [class^="printspan"] {
+	// 	display: block;
+	// 	float: left;
+	// 	margin-right: $span-padding;
+	// 	&:last-child {
+	// 		margin-right: 0;
+	// 	}
+	// }
+	// .printspan-2-5 {
+	// 	width: ( ( 100% - ( 4 * $span-padding ) ) ) *  ( 2 / 5 ) + ( $span-padding * 1 );
+	// }
+	// .printspan-3-5 {
+	// 	width: ( ( 100% - ( 4 * $span-padding ) ) ) *  ( 3 / 5 ) + ( $span-padding * 2 );
+	// }
+	// .printspan-1-3 {
+	// 	width: ( ( 100% - ( 2 * $span-padding ) ) ) *  ( 1 / 3 ) + ( $span-padding * 0 );
+	// }
+	// .printspan-2-3 {
+	// 	width: ( ( 100% - ( 2 * $span-padding ) ) ) *  ( 2 / 3 ) + ( $span-padding * 1 );
+	// }
+	.print-avoid-break { page-break-inside: avoid; }
+	.print-page-break-after { page-break-after: always; }
+	.print-hide { display: none !important; }
+	a:hover { text-decoration: none; }
+	.experience h3 a:after {
+		content: ' [' attr(data-print-url) '] ';
+		font-size: 0.65em;
+		margin-left: 0.75em;
+	}
+	.experience__links {
+		a:after {
+			content: ' [' attr(data-print-url) '] ';
+		}
+		// em:after {
+		// 	content: none;
+		// }
+		// span {
+		// 	display: block;
+		// }
+	}
+	.home-header {
+		justify-content: space-between;
+		flex-flow: row-reverse nowrap;
+		text-align: left;
+		.image-wrapper {
+			// width: auto;
+			margin: 0;
+			img {
+				width: 150px;
+				height: auto;
+				display: block;
+			}
+		}
+	}
+	.print-column-1 {
+	}
+	.print-column-2 {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+	}
+	h1 {
+		font-size: 2.75em;
+		margin-bottom: 0.5em;
+	}
+	h2 {
+		// width: $site-width - $site-padding * 2; // site container
+		// max-width: $site-max-width;
+		// margin-left: auto;
+		// margin-right: auto;
+
+		// padding: 0;
+		// border: none;
+		border-bottom: 1px solid black;
+		// margin-top: 0.25em;
+		// margin-bottom: 0.5em;
+	}
+	article {
+		margin-top: 1em;
+	}
+	.site-section {
+		margin-bottom: 0;
+		padding-top: 0;
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+	.site-section:last-of-type p:last-of-type {
+		margin-bottom: 0;
+	}
+	.position-group,
+	.full-across {
+		border: none;
+		margin-bottom: 1em;
+	}
+	.social-links {
+		margin-top: 0;
+		a {
+			display: block;
+			// margin-bottom: 0.5em;
+			&:after {
+				content: ' ' attr(data-print-url);
+			}
+			img {
+				width: 14px;
+				margin: 0;
+			}
+		}
+	}
+	.address {
+		margin-bottom: 0;
+	}
+}

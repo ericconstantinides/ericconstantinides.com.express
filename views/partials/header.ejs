@@ -1,0 +1,17 @@
+<% if (typeof page !== 'undefined' && page === 'home') { -%>
+  <section class="valprop valprop--portfolio" style="background-image: url(/images/photo--transamerica.jpg)">
+    <% include nav %>
+    <header class="valprop__header">
+      <div class="site-container">
+        <h1 class="valprop__title">Eric Constantinides' Portfolio</h1>
+      </div>
+      <div class="intro__container">
+        <div class="site-container">
+          <p class="intro">Hello! My Name is Eric Constantinides and I'm a web developer in San Francisco, Bay Area, CA.</p>
+        </div>
+      </div>
+    </header>
+  </section>
+<% } else { -%>
+  <% include nav %>
+<% } -%>

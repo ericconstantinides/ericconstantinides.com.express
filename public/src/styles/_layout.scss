@@ -1,0 +1,123 @@
+html {
+	background: white;
+}
+body {
+	background: white;
+	margin: 0;
+	padding: 0;
+}
+* {
+	&,&:before,&:after {
+		@include box-sizing(border-box);
+		background-repeat: no-repeat;
+	}
+}
+.clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+.site-container {
+	@extend .clearfix;
+	width: $site-width - $site-padding * 2;
+	max-width: $site-max-width;
+	margin-left: auto;
+	margin-right: auto;
+	// @include breakpoint(small) {
+	// 	width: $site-width - $site-padding;
+	// }
+}
+
+.row {
+	@extend .clearfix;
+	float: left;
+	width: 100%;
+}
+%spanprep {
+	display: block;
+	float: left;
+	margin-right: $span-padding;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+[class^="span"] {
+	@extend %spanprep;
+}
+.span-1-2 {
+	width: ( ( 100% - ( 1 * $span-padding ) ) ) *  ( 1 / 2 ) + ( $span-padding * 0 );
+}
+.span-1-3 {
+	width: ( ( 100% - ( 2 * $span-padding ) ) ) *  ( 1 / 3 ) + ( $span-padding * 0 );
+}
+.span-2-3 {
+	width: ( ( 100% - ( 2 * $span-padding ) ) ) *  ( 2 / 3 ) + ( $span-padding * 1 );
+}
+.span-1-4 {
+	width: ( ( 100% - ( 3 * $span-padding ) ) ) *  ( 1 / 4 ) + ( $span-padding * 0 );
+}
+.span-3-4 {
+	width: ( ( 100% - ( 3 * $span-padding ) ) ) *  ( 3 / 4 ) + ( $span-padding * 2 );
+}
+.span-1-6 {
+	width: ( ( 100% - ( 5 * $span-padding ) ) ) *  ( 1 / 6 ) + ( $span-padding * 0 );
+}
+.span-1-7 {
+	width: ( ( 100% - ( 6 * $span-padding ) ) ) *  ( 1 / 7 ) + ( $span-padding * 0 );
+}
+[class^="span"] {
+	&:last-child {
+		margin-right: 0;
+	}
+}
+@include breakpoint(medium) {
+	.medium-span-full {
+		width: 100%;
+		margin: 0;
+	}
+	.medium-span-1-2 {
+		width: ( ( 100% - ( 1 * $span-padding ) ) ) *  ( 1 / 2 ) + ( $span-padding * 0 );
+	}
+	.medium-span-1-3 {
+		width: ( ( 100% - ( 2 * $span-padding ) ) ) *  ( 1 / 3 ) + ( $span-padding * 0 );
+	}
+	.medium-span-1-4 {
+		width: ( ( 100% - ( 3 * $span-padding ) ) ) *  ( 1 / 4 ) + ( $span-padding * 0 );
+	}
+}
+.show-medium { display: none; }
+.hide-medium { display: block; }
+.show-small { display: none; }
+.hide-small { display: block; }
+@include breakpoint(medium) {
+	.show-medium { display: block !important; }
+	.hide-medium { display: none !important; }
+}
+@include breakpoint(small) {
+	[class^="span"],
+	.small-span-full {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.small-span-1-2 {
+		width: ( ( 100% - ( 1 * $span-padding ) ) ) *  ( 1 / 2 ) + ( $span-padding * 0 );
+	}
+	.small-span-1-3 {
+		width: ( ( 100% - ( 2 * $span-padding ) ) ) *  ( 1 / 3 ) + ( $span-padding * 0 );
+	}
+	.small-span-1-4 {
+		width: ( ( 100% - ( 3 * $span-padding ) ) ) *  ( 1 / 4 ) + ( $span-padding * 0 );
+	}
+	.show-small { display: block !important; }
+	.hide-small { display: none !important; }
+}
+main {
+	padding: 0 0 2em;
+}

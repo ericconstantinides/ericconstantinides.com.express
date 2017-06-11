@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head><% include partials/head %></head>
+<body class="<%= bodyClass %>">
+<% include partials/header %>
+
+<section class="site-section portfolio__section">
+  <div class="site-container">
+    <% include partials/title %>
+    <div id="portfolio" class="portfolio__group u-m-0">
+      <% if (typeof page !== 'undefined' && page === 'home') {
+        portfolio.forEach(item => { %>
+          <% include content/portfolio-item %>
+        <% });
+      } else if (typeof page !== 'undefined' && page === 'skills') { %>
+        <div id="skills" class="skills portfolio__group u-m-0"></div>
+        <script src="/js/skills.js"></script>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<% include partials/footer %>
+</body>
