@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "local": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "web": "node ./bin/www"
   },
   "dependencies": {
