@@ -42,9 +42,9 @@ router.get('/resume', function(req, res, next) {
   });
 });
 
-// router for ericconstantinides.com for certbot to successfully qualify:
-app.get('/.well-known/acme-challenge/Odrqr9dVIHj4kmTQCbn5TI1_L5EPpLEqxH8z123rStM', function(req, res) {
-  res.send('Odrqr9dVIHj4kmTQCbn5TI1_L5EPpLEqxH8z123rStM.WKo68pjMdusJRlMoXdPeDJ-t_aKAP01y6xJGz3eU9HQ')
+// route for certbot to qualify www.ericconstantinides.com:
+app.get('/.well-known/acme-challenge/Dxs8qid5F2X6JGSkap7sf0S7PMb4CHEEE-uTUQ_v2N4', function(req, res) {
+  res.send('Dxs8qid5F2X6JGSkap7sf0S7PMb4CHEEE-uTUQ_v2N4.WKo68pjMdusJRlMoXdPeDJ-t_aKAP01y6xJGz3eU9HQ')
 })
 
 module.exports = router;
