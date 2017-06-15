@@ -15,6 +15,10 @@ let resume = require('./routes/resume');
 
 let app = express();
 
+let siteDetails = require('./eric-constantinides-com.json');
+app.locals.globalTitle = siteDetails.globalTitle;
+app.locals.headline = siteDetails.headline;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
