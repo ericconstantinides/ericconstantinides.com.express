@@ -17,31 +17,6 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/skills', function(req, res, next) {
-  res.render('index', {
-    page: 'skills',
-    bodyClass: 'body--resume',
-    intro: '',
-    title: 'Skills'
-  });
-});
-
-router.get('/snippets', function(req, res, next) {
-  res.render('snippets', {
-    page: 'snippets',
-    bodyClass: 'body--resume',
-    intro: '<p class="portfolio__intro">Incorporating a mixture of HTML, CSS, SVG, and JavaScript to either tell or a story or make a page come alive.</p>',
-    title: 'HTML / CSS / JavaScript Interactivity'
-  });
-});
-
-router.get('/resume', function(req, res, next) {
-  res.render('resume', {
-    page: 'resume',
-    bodyClass: 'body--resume',
-  });
-});
-
 // route for certbot to qualify www.ericconstantinides.com:
 router.get('/.well-known/acme-challenge/Dxs8qid5F2X6JGSkap7sf0S7PMb4CHEEE-uTUQ_v2N4', function(req, res) {
   res.send('Dxs8qid5F2X6JGSkap7sf0S7PMb4CHEEE-uTUQ_v2N4.WKo68pjMdusJRlMoXdPeDJ-t_aKAP01y6xJGz3eU9HQ');
