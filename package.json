@@ -5,7 +5,9 @@
   "scripts": {
     "local": "nodemon ./bin/www",
     "start": "node ./bin/www",
-    "web": "node ./bin/www"
+    "web": "node ./bin/www",
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -41,6 +43,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.11.1",
     "gulp-uglify": "^1.5.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "pm2": "^2.5.0"
   }
 }
